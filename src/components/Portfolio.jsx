@@ -1,4 +1,5 @@
 import React, { useLayoutEffect, useRef } from "react";
+import Images from "../parallax";
 import { FiSettings } from "react-icons/fi";
 import { ImCss3, ImHtmlFive } from "react-icons/im";
 import { SiJavascript, SiTailwindcss, SiRedux, SiGithub } from "react-icons/si";
@@ -17,65 +18,44 @@ export const Portfolio = () => {
     const ctx = gsap.context((self) => {
       const image = self.selector(".image");
       const text = self.selector(".text");
-      if (window.innerWidth>=1000) {
-          gsap.from(image, {
-            x: -600,
-            opacity: 0,
-            scrollTrigger: {
-              trigger: image,
-              start: "bottom bottom",
-              end: "top 10%",
-              scrub: true,
-            },
-          });
-          gsap.from(text, {
-            x: 800,
-            opacity: 0,
-            scrollTrigger: {
-              trigger: text,
-              start: "bottom bottom",
-              end: "top 10%",
-              scrub: true,
-            },
-          });
-      }
-     else if (window.innerWidth<1000) {
-          gsap.from(image, {
-            x: -600,
-            opacity: 0,
-            scrollTrigger: {
-              trigger: image,
-              start: "bottom bottom",
-              end: "top 25%",
-              scrub: true,
-            },
-          });
-          gsap.from(text, {
-            x: 1200,
-            opacity: 0,
-            scrollTrigger: {
-              trigger: text,
-              start: "bottom bottom",
-              end: "top 20%",
-              scrub: true,
-            },
-          });
+      if (window.innerWidth >= 1000) {
+        gsap.from(image, {
+          x: -600,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: image,
+            start: "bottom bottom",
+            end: "top 10%",
+            scrub: true,
+          },
+        });
+        gsap.from(text, {
+          x: 800,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: text,
+            start: "bottom bottom",
+            end: "top 10%",
+            scrub: true,
+          },
+        });
       }
     }, main);
     return () => ctx.revert();
   }, []);
   return (
     <>
-        <div className="overflow-hidden absolute z-40 w-screen h-screen">
+      <section className="w-screen overflow-hidden h-screen absolute z-40">
+        <div className="absolute overflow-hidden z-40 w-screen h-screen">
           <LazyLoadImage
-            src="parallax/planet1.png"
+            src={Images.planet1}
             className="w-36 animatePlanet1 object-cover absolute"
             alt=""
           />
         </div>
         <div className="overflow-hidden absolute z-40 w-screen h-screen">
           <LazyLoadImage
-            src="parallax/planet2.png"
+            src={Images.planet2}
             className="w-36 object-cover animatePlanet3 absolute"
             alt=""
           />
@@ -83,33 +63,37 @@ export const Portfolio = () => {
         <div className="overflow-hidden absolute z-40 w-screen h-screen">
           <LazyLoadImage
             className="w-20 absolute animatePlanet1 top-40 object-cover rounded-lg"
-            src="parallax/rock1.png"
+            src={Images.rock1}
             alt=""
           ></LazyLoadImage>
         </div>
         <div className="overflow-hidden absolute z-40 w-screen h-screen">
           <LazyLoadImage
             className="w-20 absolute animatePlanet3 top-80 object-cover rounded-lg"
-            src="parallax/rock2.png"
+            src={Images.rock2}
             alt=""
           ></LazyLoadImage>
         </div>
         <div className="overflow-hidden absolute z-40 w-screen h-screen">
           <LazyLoadImage
             className="w-20 absolute animatePlanet2 object-cover rounded-lg"
-            src="parallax/rock3.png"
+            src={Images.rock3}
             alt=""
           ></LazyLoadImage>
         </div>
-      <LazyLoadImage
-        src="parallax/stars1.jpg"
-        className="w-screen h-screen object-cover z-30 absolute"
-        alt=""
-      />
-      <div ref={main} className="p-3 z-50 relative text-cyan-600 h-screen">
+        <LazyLoadImage
+          src={Images.stars}
+          className="w-screen h-screen object-cover z-30 absolute"
+          alt=""
+        />
+      </section>
+      <div
+        ref={main}
+        className="p-3 z-50 relative w-screen text-cyan-600 h-screen"
+      >
         <div className="flex justify-start bg-[rgba(255,255,255,0.06)] backdrop-blur rounded p-1">
           <div className="image w-[200px] md:w-[300px]">
-            <LazyLoadImage className="rounded" src="yash.jpg" />
+            <LazyLoadImage className="rounded" src={Images.yash} />
           </div>
           <div className="px-2 text">
             <h1 className="md:text-2xl md:font-semibold mb-2">

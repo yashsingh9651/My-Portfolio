@@ -1,4 +1,5 @@
 import React, { useLayoutEffect, useRef } from "react";
+import Images from '../parallax'
 import { IoLogoWhatsapp } from "react-icons/io";
 import { BsGithub } from "react-icons/bs";
 import { ImLinkedin } from "react-icons/im";
@@ -106,61 +107,61 @@ export const Home = () => {
   }, []);
   return (
     <>
-      <section ref={main} className="relative bg-slate-900 h-screen">
+      <section ref={main} className="relative w-screen bg-slate-900 h-screen">
         <LazyLoadImage
-          src="parallax/front.png"
+          src={Images.front}
           className="w-screen h-screen object-cover z-40 absolute"
           alt=""
         />
         <LazyLoadImage
-          src="parallax/back.png"
+          src={Images.back}
           className="w-screen h-screen image object-cover z-30 absolute"
           alt=""
         />
         <LazyLoadImage
-          src="parallax/stars1.jpg"
+          src={Images.stars}
           className="w-screen h-screen object-cover z-10 absolute"
           alt=""
         />
         <div className="planet1 absolute z-20 w-screen h-screen">
           <LazyLoadImage
-            src="parallax/planet1.png"
+            src={Images.planet1}
             className="w-36 top-28 right-52 object-cover absolute"
             alt=""
           />
         </div>
         <div className="planet2 absolute z-20 w-screen h-screen">
           <LazyLoadImage
-            src="parallax/planet2.png"
+            src={Images.planet2}
             className="w-36 object-cover absolute left-56 top-60"
             alt=""
           />
         </div>
-        <div className="gif absolute z-50 lg:p-28 p-2 pb-14 lg:pb-28 w-screen h-screen flex md:justify-center lg:justify-end lg:items-center items-end">
+        <div className="gif absolute z-50 lg:p-28 p-2 pb-28 w-screen h-screen flex md:justify-center lg:justify-end lg:items-center items-end">
           <LazyLoadImage
             className="lg:h-80 object-cover rounded-lg"
-            src="parallax/intro.gif"
+            src={Images.intro}
             alt=""
           ></LazyLoadImage>
         </div>
         <div className="rock absolute z-20 w-screen h-screen">
           <LazyLoadImage
             className="w-20 absolute bottom-16 right-80 object-cover rounded-lg"
-            src="parallax/rock1.png"
+            src={Images.rock1}
             alt=""
           ></LazyLoadImage>
         </div>
         <div className="rock2 absolute z-20 w-screen h-screen">
           <LazyLoadImage
             className="w-20 absolute top-16 left-80 object-cover rounded-lg"
-            src="parallax/rock2.png"
+            src={Images.rock2}
             alt=""
           ></LazyLoadImage>
         </div>
         <div className="rock3 absolute z-20 w-screen h-screen">
           <LazyLoadImage
             className="w-20 absolute top-[45%] left-[40%] object-cover rounded-lg"
-            src="parallax/rock3.png"
+            src={Images.rock3}
             alt=""
           ></LazyLoadImage>
         </div>
