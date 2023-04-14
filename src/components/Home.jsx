@@ -13,7 +13,7 @@ export const Home = () => {
   const main = useRef();
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
-      const image = self.selector(".image");
+      const back = self.selector(".back");
       const planet1 = self.selector(".planet1");
       const planet2 = self.selector(".planet2");
       const gif = self.selector(".gif");
@@ -21,10 +21,10 @@ export const Home = () => {
       const rock2 = self.selector(".rock2");
       const rock3 = self.selector(".rock3");
       const text = self.selector(".text");
-      gsap.to(image, {
+      gsap.to(back, {
         y: 300,
         scrollTrigger: {
-          trigger: image,
+          trigger: back,
           start: "top top",
           end: "bottom 20%",
           scrub: true,
@@ -115,7 +115,7 @@ export const Home = () => {
         />
         <LazyLoadImage
           src={Images.back}
-          className="w-screen h-screen image object-cover z-30 absolute"
+          className="w-screen h-screen back object-cover z-30 absolute"
           alt=""
         />
         <LazyLoadImage
@@ -151,7 +151,7 @@ export const Home = () => {
             alt=""
           ></LazyLoadImage>
         </div>
-        <div className="rock2 absolute z-20 w-screen h-screen">
+        <div className="rock2 absolute z-20 overflow-hidden w-screen h-screen">
           <LazyLoadImage
             className="w-20 absolute top-16 left-80 object-cover rounded-lg"
             src={Images.rock2}
