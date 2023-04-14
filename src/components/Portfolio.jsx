@@ -93,7 +93,7 @@ export const Portfolio = () => {
       >
         <div className="flex justify-start bg-[rgba(255,255,255,0.06)] backdrop-blur rounded p-1">
           <div className="image w-[200px] md:w-[300px]">
-            <LazyLoadImage className="rounded" src={Images.yash} />
+            <LazyLoadImage className="rounded" src={Images.yash}/>
           </div>
           <div className="px-2 text">
             <h1 className="md:text-2xl md:font-semibold mb-2">
