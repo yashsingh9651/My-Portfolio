@@ -45,6 +45,7 @@ export const Portfolio = () => {
   }, []);
   return (
     <>
+    {/* Background Animation */}
       <section className="w-screen overflow-hidden h-screen absolute z-40">
         <div className="absolute overflow-hidden z-40 w-screen h-screen">
           <LazyLoadImage
@@ -87,6 +88,7 @@ export const Portfolio = () => {
           alt=""
         />
       </section>
+      {/* Content */}
       <div
         ref={main}
         className="p-3 z-50 relative w-screen text-cyan-600 h-screen"
@@ -98,7 +100,7 @@ export const Portfolio = () => {
           <div className="px-2 text">
             <h1 className="md:text-2xl md:font-semibold mb-2">
               I am{" "}
-              <span className="md:text-4xl md:font-bold text-purple-800">
+              <span className="md:text-4xl font-[Phudu] md:font-bold text-purple-800">
                 Yash Singh
               </span>
             </h1>
@@ -114,7 +116,7 @@ export const Portfolio = () => {
         </div>
         <h1 className="flex items-center md:text-3xl md:font-medium gap-2 p-1 mt-10 md:p-2">
           <FiSettings />
-          <div>My Skills</div>
+          <div className="font-[Phudu]">My Skills</div>
         </h1>
         <div className="w-full grid grid-cols-1 gap-1 md:grid-cols-2 md:gap-3 text-lg">
           {/* Language Section */}

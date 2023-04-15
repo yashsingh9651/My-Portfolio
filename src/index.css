@@ -86,6 +86,9 @@ body{
     transform: translate(680px,300px);
   }
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
   /*
 ! tailwindcss v3.3.1 | MIT License | https://tailwindcss.com
 */

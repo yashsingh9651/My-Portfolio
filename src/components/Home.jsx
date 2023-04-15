@@ -163,6 +163,7 @@ export const Home = () => {
             <Typed
               strings={["Yash Singh", "a Web Developer"]}
               loop
+              style={{fontFamily:'Tilt Prism'}}
               className="text-purple-600"
               typeSpeed={100}
               backSpeed={100}

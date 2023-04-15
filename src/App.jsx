@@ -4,7 +4,7 @@ import { Portfolio } from "./components/Portfolio";
 import { Project } from "./components/Project";
 function App() {
   return (
-    <div className="w-screen custom3">
+    <div style={{fontFamily:'Chakra Petch'}} className="w-screen custom3">
       <Home/>
       <Portfolio/>
       <Project/>

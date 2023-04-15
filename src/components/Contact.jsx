@@ -21,16 +21,29 @@ export const Contact=()=>{
     const {values,handleChange,handleBlur,handleSubmit,errors,touched}=useFormik({
         initialValues: data,
         validationSchema:Schema,
-        onSubmit:(values,action)=>{
+        onSubmit:async (values,action)=>{
             emailjs.sendForm('service_gxm49ge', 'template_hr64q6m', form.current, 'pLJS6d0WCzJXu3_og')
             .then((result) => {
                 setThanks(true);
+
                 setTimeout(() => {
                   setThanks(false);
                 }, 2000);
             }, (error) => {
                 console.log(error.text);
             });
+            const {name,email,message} = values;
+            const res = await fetch('https://my-portfolio-48891-default-rtdb.firebaseio.com/contactlist.json',{
+              method: 'POST',
+              headers:{
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                name,
+                email,
+                message
+              })
+            })
             action.resetForm();
         }
     });
@@ -82,7 +95,7 @@ export const Contact=()=>{
     <div className='relative w-screen z-50'>
         <div className='w-4/5 h-screen mx-auto flex flex-col justify-center items-center text-center'>
             {/* Heading */}
-            <h1 className='text-lg text-white font-semibold pb-4 md:text-4xl'>Feel Free to Contact<hr/></h1>
+            <h1 className='text-lg text-white font-semibold pb-4 md:text-4xl font-[Phudu]'>Feel Free to Contact<hr/></h1>
             {/* Contact Box */}
             <div className="relative w-full h-[60vh] lg:flex lg:justify-between lg:items-center sm:h-[50vh] md:h-[60vh] rounded backdrop-blur-sm">
                 <div className='w-[170px] h-[170px] flex justify-center items-end md:w-[300px] md:h-[300px] bg-[rgba(255,255,255,0.4)] rounded-full animate-pulse'>
