@@ -14,6 +14,9 @@ body{
 ::-webkit-scrollbar-track{
   background-color: #182441
 }
+@media (max-width: 1280px) {
+  .custom3{overflow-x: hidden;}
+}
 .animatePlanet1{
   animation: animationPlanet1 70s infinite linear
 }
@@ -494,9 +497,6 @@ video {
   .bottom-16{
   bottom: 4rem;
 }
-  .bottom-\[-4px\]{
-  bottom: -4px;
-}
   .left-56{
   left: 14rem;
 }
@@ -506,14 +506,11 @@ video {
   .left-\[40\%\]{
   left: 40%;
 }
-  .right-0{
-  right: 0px;
-}
   .right-2{
   right: 0.5rem;
 }
-  .right-5{
-  right: 1.25rem;
+  .right-20{
+  right: 5rem;
 }
   .right-52{
   right: 13rem;
@@ -563,8 +560,9 @@ video {
   .m-1{
   margin: 0.25rem;
 }
-  .m-auto{
-  margin: auto;
+  .mx-auto{
+  margin-left: auto;
+  margin-right: auto;
 }
   .my-2{
   margin-top: 0.5rem;
@@ -578,9 +576,6 @@ video {
 }
   .mt-10{
   margin-top: 2.5rem;
-}
-  .mt-8{
-  margin-top: 2rem;
 }
   .flex{
   display: flex;
@@ -606,9 +601,6 @@ video {
   .h-\[60vh\]{
   height: 60vh;
 }
-  .h-\[70vh\]{
-  height: 70vh;
-}
   .h-\[80px\]{
   height: 80px;
 }
@@ -629,9 +621,6 @@ video {
 }
   .w-4\/5{
   width: 80%;
-}
-  .w-5\/6{
-  width: 83.333333%;
 }
   .w-\[150px\]{
   width: 150px;
@@ -681,6 +670,9 @@ video {
   .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+  .flex-col{
+  flex-direction: column;
+}
   .items-end{
   align-items: flex-end;
 }
@@ -705,9 +697,6 @@ video {
   .overflow-hidden{
   overflow: hidden;
 }
-  .overflow-x-hidden{
-  overflow-x: hidden;
-}
   .rounded{
   border-radius: 0.25rem;
 }
@@ -722,10 +711,6 @@ video {
 }
   .border{
   border-width: 1px;
-}
-  .border-cyan-600{
-  --tw-border-opacity: 1;
-  border-color: rgb(8 145 178 / var(--tw-border-opacity));
 }
   .border-white{
   --tw-border-opacity: 1;
@@ -767,9 +752,6 @@ video {
   .p-3{
   padding: 0.75rem;
 }
-  .p-5{
-  padding: 1.25rem;
-}
   .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -806,6 +788,10 @@ video {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
+  .text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
   .text-5xl{
   font-size: 3rem;
   line-height: 1;
@@ -820,6 +806,10 @@ video {
   .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+  .text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
   .text-xs{
   font-size: 0.75rem;
@@ -1039,9 +1029,6 @@ video {
   }
 }
   @media (min-width: 1024px){
-  .lg\:top-\[5vw\]{
-    top: 5vw;
-  }
   .lg\:mx-0{
     margin-left: 0px;
     margin-right: 0px;
@@ -1052,6 +1039,9 @@ video {
   }
   .lg\:block{
     display: block;
+  }
+  .lg\:flex{
+    display: flex;
   }
   .lg\:hidden{
     display: none;
@@ -1070,6 +1060,9 @@ video {
   }
   .lg\:justify-end{
     justify-content: flex-end;
+  }
+  .lg\:justify-between{
+    justify-content: space-between;
   }
   .lg\:gap-5{
     gap: 1.25rem;

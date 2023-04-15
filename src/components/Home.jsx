@@ -13,7 +13,6 @@ export const Home = () => {
   const main = useRef();
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
-      const back = self.selector(".back");
       const planet1 = self.selector(".planet1");
       const planet2 = self.selector(".planet2");
       const gif = self.selector(".gif");
@@ -21,15 +20,6 @@ export const Home = () => {
       const rock2 = self.selector(".rock2");
       const rock3 = self.selector(".rock3");
       const text = self.selector(".text");
-      gsap.to(back, {
-        y: 300,
-        scrollTrigger: {
-          trigger: back,
-          start: "top top",
-          end: "bottom 20%",
-          scrub: true,
-        },
-      });
       gsap.to(planet1, {
         y: 340,
         x: -220,

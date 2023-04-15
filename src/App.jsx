@@ -4,11 +4,11 @@ import { Portfolio } from "./components/Portfolio";
 import { Project } from "./components/Project";
 function App() {
   return (
-    <div className="w-screen overflow-x-hidden">
-    <Home/>
-    <Portfolio/>
-    <Project/>
-    <Contact/>
+    <div className="w-screen custom3">
+      <Home/>
+      <Portfolio/>
+      <Project/>
+      <Contact/>
     </div>
   );
 }
