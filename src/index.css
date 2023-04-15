@@ -86,9 +86,6 @@ body{
     transform: translate(680px,300px);
   }
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
   /*
 ! tailwindcss v3.3.1 | MIT License | https://tailwindcss.com
 */
@@ -783,6 +780,9 @@ video {
   .font-\[Arvo\]{
   font-family: Arvo;
 }
+  .font-\[Phudu\]{
+  font-family: Phudu;
+}
   .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1106,5 +1106,8 @@ video {
   }
   .lg\:font-medium{
     font-weight: 500;
+  }
+  .lg\:font-semibold{
+    font-weight: 600;
   }
 }
