@@ -180,13 +180,6 @@ export const Home = () => {
           <div className="flex gap-3 md:text-3xl text-white  md:w-3/6 md:mx-auto lg:mx-0">
             <a
               target={"_blank"}
-              href="https://api.whatsapp.com/qr/EZPIX56PGTK6B1?autoload=1&app_absent=0"
-              className="bg-[#c2c2c24a] p-1 rounded-md backdrop-blur"
-            >
-              <IoLogoWhatsapp />
-            </a>
-            <a
-              target={"_blank"}
               href="https://github.com/yashsingh9651"
               className="bg-[#c2c2c24a] p-1 rounded-md backdrop-blur"
             >

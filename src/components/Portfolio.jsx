@@ -4,8 +4,7 @@ import { FiSettings } from "react-icons/fi";
 import { ImCss3, ImHtmlFive } from "react-icons/im";
 import { SiJavascript, SiTailwindcss, SiRedux, SiGithub } from "react-icons/si";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { FaBootstrap, FaGitAlt } from "react-icons/fa";
-import { IoLogoNodejs } from "react-icons/io";
+import {FaGitAlt } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import { RiReactjsLine } from "react-icons/ri";
 import { DiMongodb } from "react-icons/di";
@@ -105,7 +104,7 @@ export const Portfolio = () => {
               </span>
             </h1>
             <h1 className="text-[10px] md:text-2xl md:font-medium">
-              Currently Living In Chitrakoot, Uttar Pradesh India. Having 5
+              Currently Living In Noida, Uttar Pradesh India. Having 10
               Months Of Experience In Frontend Development.
               <br />I Mostly Work With Java Script And Its Framework React Js.
               <br />I Have Great Experence In Building Great Product From
@@ -146,10 +145,6 @@ export const Portfolio = () => {
                 <h1 className="text-sm md:text-xl">Tailwind</h1>
               </div>
               <div className="flex items-center gap-1">
-                <FaBootstrap className="text-[#7711f7]" />
-                <h1 className="text-sm md:text-xl">Bootstrap</h1>
-              </div>
-              <div className="flex items-center gap-1">
                 <TbBrandNextjs className="text-[#7711f7]" />
                 <h1 className="text-sm md:text-xl">Next.js</h1>
               </div>
@@ -184,21 +179,11 @@ export const Portfolio = () => {
             </div>
           </div>
           <div className="image bg-[rgba(255,255,255,0.06)] backdrop-blur rounded p-1 text-lg md:text-xl md:p-2">
-            <h1 className="md:text-2xl md:font-medium">Storage :</h1>
+            <h1 className="md:text-2xl md:font-medium">Database :</h1>
             <div className="grid grid-cols-3 text-3xl md:text-4xl pt-2">
               <div className="flex items-center gap-1">
                 <DiMongodb className="text-[#589636]" />
                 <h1 className="text-sm md:text-xl">Mongo DB</h1>
-              </div>
-            </div>
-          </div>
-          {/* Platform Section */}
-          <div className="text bg-[rgba(255,255,255,0.06)] backdrop-blur rounded p-1 text-lg md:text-xl md:p-2">
-            <h1 className="md:text-2xl md:font-medium">Platform :</h1>
-            <div className="grid grid-cols-3 text-2xl md:text-3xl pt-2">
-              <div className="flex items-center gap-1">
-                <IoLogoNodejs className="text-green-600" />
-                <h1 className="text-sm md:text-xl">Node.js</h1>
               </div>
             </div>
           </div>
